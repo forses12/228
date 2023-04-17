@@ -1,7 +1,9 @@
 import pygame
-import control,model,view
+import control,view,model
 
 
 
 while True:
     control.control()
+    model.go()
+    view.draw()
