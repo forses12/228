@@ -1,8 +1,8 @@
-import pygame
+import pygame,random
 
 screen=pygame.display.set_mode([800,600])
 import model
 def draw():
     screen.fill([0,0,0])
-    pygame.draw.rect(screen,[125,53,77,],model.a)
+    screen.blit(model.f,model.a.topleft)
     pygame.display.flip()

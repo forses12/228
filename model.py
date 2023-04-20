@@ -1,14 +1,22 @@
 import pygame
 
-a=pygame.Rect([10,10],[50,50])
+f = pygame.image.load('tyrhtegrfed.png')
+f=pygame.transform.scale(f,[60,60/1.14])
+a=pygame.Rect([10,10],[f.get_width(),f.get_height()])
 screen=pygame.display.get_surface()
 
+v=2
+g=2
 def go():
-    global a,v
-    v=2
+    global a,v,g
     a.x+=v
+    a.y+=g
     if a.right>=screen.get_width() and v>0:
         v=-v
     elif  a.x<=0 and v<0:
         v=-v
+    if a.bottom>=screen.get_height() and g>0:
+        g=-g
+    elif  a.y<=0 and g<0:
+        g=-g
 
