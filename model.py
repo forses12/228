@@ -1,8 +1,8 @@
 import pygame
 
-f = pygame.image.load('tyrhtegrfed.png')
-f=pygame.transform.scale(f,[60,60/1.14])
-a=pygame.Rect([10,10],[f.get_width(),f.get_height()])
+f = pygame.image.load('Без имени.png')
+f=pygame.transform.scale(f,[200,200/3.3])
+a=pygame.Rect([10,10],[f.get_height(),f.get_height()])
 screen=pygame.display.get_surface()
 
 v=2
