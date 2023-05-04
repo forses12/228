@@ -1,22 +1,22 @@
 import pygame
 
-f = pygame.image.load('Без имени.png')
-f=pygame.transform.scale(f,[200,200/3.3])
-a=pygame.Rect([10,10],[f.get_height(),f.get_height()])
+image = pygame.image.load('vbfgnhfjmk.png')
+image=pygame.transform.scale(image, [200 / 3.3, 200])
+small_rect=pygame.Rect([10, 200], [image.get_width(), image.get_width()])
 screen=pygame.display.get_surface()
 
-v=2
-g=2
+speed_x=1
+speed_y=-10
 def go():
-    global a,v,g
-    a.x+=v
-    a.y+=g
-    if a.right>=screen.get_width() and v>0:
-        v=-v
-    elif  a.x<=0 and v<0:
-        v=-v
-    if a.bottom>=screen.get_height() and g>0:
-        g=-g
-    elif  a.y<=0 and g<0:
-        g=-g
+    global small_rect,speed_x,speed_y
+    small_rect.x+=speed_x
+    small_rect.y+=speed_y
+    if small_rect.right>=screen.get_width() and speed_x>0:
+        speed_x=-speed_x
+    elif  small_rect.x<=0 and speed_x<0:
+        speed_x=-speed_x
+    if small_rect.bottom>=screen.get_height() and speed_y>0:
+        speed_y=-speed_y
+    elif  small_rect.y<=0 and speed_y<0:
+        speed_y=-speed_y
 
