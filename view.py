@@ -24,10 +24,12 @@ def draw():
 
     fireball()
 
-
     screen.fill([0,0,0])
     screen.blit(povorot, big_rect)
     # pygame.draw.rect(screen, [255,255,255], model.small_rect, 1)
     # pygame.draw.rect(screen,[255,255,255],big_rect,1)
+    pygame.draw.rect(screen,[89,46,51],model.ice_rect)
 
     pygame.display.flip()
+
+

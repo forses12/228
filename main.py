@@ -1,5 +1,5 @@
 import pygame,time
-import control,view,model
+import view,model,control
 
 
 
