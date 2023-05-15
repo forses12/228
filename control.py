@@ -16,3 +16,5 @@ def control():
             model.defender(2)
         elif z.type==pygame.KEYDOWN and z.key==pygame.K_RIGHT:
             model.defender(3)
+        if z.type==pygame.KEYDOWN and z.key==pygame.K_F11:
+            model.take_screen()

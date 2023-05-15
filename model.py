@@ -10,6 +10,11 @@ speed_x = 1
 speed_y = -10
 
 
+def take_screen():
+    if screen.get_width()==800:
+        pygame.display.set_mode([0,0],flags=pygame.FULLSCREEN)
+    else:
+        pygame.display.set_mode([800, 600])
 def go():
     global small_rect, speed_x, speed_y
     small_rect.x += speed_x
@@ -29,14 +34,17 @@ def defender(f):
         ice_rect.w = screen.get_width()
         ice_rect.h = 60
         ice_rect.y = 0
+        ice_rect.x = 0
     elif f == 1:
         ice_rect.w = screen.get_width()
         ice_rect.h = 60
         ice_rect.y = screen.get_height() - 60
+        ice_rect.x=0
     elif f == 2:
         ice_rect.w = 60
         ice_rect.h = screen.get_height()
         ice_rect.y = 0
+        ice_rect.x=0
     elif f == 3:
         ice_rect.w = 60
         ice_rect.h = screen.get_height()

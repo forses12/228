@@ -4,8 +4,10 @@ import pygame,random
 
 screen=pygame.display.set_mode([800,600])
 import model
-def draw():
+image1=pygame.image.load('лед 1.jpg')
 
+def draw():
+    pygame.transform.scale(image1,[60,screen.get_height()])
     a=math_utils.get_angle_by_point(model.small_rect.center, [model.small_rect.centerx + model.speed_x, model.small_rect.centery + model.speed_y])
     povorot=pygame.transform.rotate(model.image, a)
     big_rect=pygame.Rect([10,10],povorot.get_size())
@@ -26,6 +28,11 @@ def draw():
 
     screen.fill([0,0,0])
     screen.blit(povorot, big_rect)
+    if model.ice_rect.w==60:
+        pygame.transform.rotate(image1,90)
+        screen.blit(image1,[model.ice_rect.x,0])
+    else:
+        screen.blit(image1,[0,model.ice_rect.y])
     # pygame.draw.rect(screen, [255,255,255], model.small_rect, 1)
     # pygame.draw.rect(screen,[255,255,255],big_rect,1)
     pygame.draw.rect(screen,[89,46,51],model.ice_rect)
