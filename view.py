@@ -27,6 +27,9 @@ def draw():
     fireball()
 
     screen.fill([0,0,0])
+    pygame.init()
+    print = pygame.font.SysFont('alice', 25).render(str(model.heart) + 'жизней', True, [0, 255, 216])
+    screen.blit(print, [10, 10])
     pygame.draw.rect(screen,[89,46,51],model.ice_rect)
     screen.blit(povorot, big_rect)
     if model.ice_rect.w==60 and image1.get_width()!=60:
